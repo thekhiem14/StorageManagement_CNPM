@@ -1,0 +1,26 @@
+# Ignore build output
+/out/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore logs
+*.log
+
+# Ignore temporary system files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled class files
+*.class
+
+# Ignore packaged files
+*.jar
+*.war
+*.ear
+
+# Nếu bạn muốn giữ thư viện JAR tự add thủ công (Junit, mysql_jdbc, sqljdbc)
+# thì KHÔNG ignore thư mục /Junit, /mysql_jdbc, /sqljdbc_12.6.1.0_enu
+# (vì bạn muốn team clone repo vẫn chạy được)
+# => Chỉ ignore *.jar sinh ra do build, còn jar bạn thêm vào project thì vẫn commit
