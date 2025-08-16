@@ -16,7 +16,6 @@ Thumbs.db
 *.class
 
 # Ignore packaged files
-*.jar
 *.war
 *.ear
 
