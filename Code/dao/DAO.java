@@ -10,11 +10,13 @@ public class DAO {
 	
 	public DAO(){
 		if(con == null){
-			String dbUrl = "jdbc:mysql://127.0.0.1:3306/StoreManagement?useSSL=false&serverTimezone=UTC";
-			String dbClass = "com.mysql.cj.jdbc.Driver";
+			String dbUrl = EnvConfig.get("DB_URL");
+			String dbClass = EnvConfig.get("DB_DRIVER");
+			String dbUsername = EnvConfig.get("DB_USERNAME");
+			String dbPassword = EnvConfig.get("DB_PASSWORD");
 			try {
 				Class.forName(dbClass);
-				con = DriverManager.getConnection (dbUrl, "root", "12345");
+				con = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
 				System.out.println("Connected to database");
 			}catch(Exception e) {
 				e.printStackTrace();

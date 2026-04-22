@@ -4,7 +4,7 @@
 # Ignore IntelliJ IDEA project files
 .idea/
 *.iml
-
+.env
 # Ignore logs
 *.log
 
